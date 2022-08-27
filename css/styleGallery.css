@@ -1,0 +1,632 @@
+body {
+    background-color: #00cbff;
+}
+
+.slider{
+	height: 100%;
+	text-align: center;
+	position: relative;
+
+}
+
+
+
+
+
+.scene {
+	position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/*[Table of contents]
+
+1. General style
+    1.1 Typography
+    1.2 Specials Classes
+2. Header
+    2.1 Menu
+    2.2 Burger Button
+    2.3 Collapse Navigation
+3. Pages Style
+4. Home Slider
+    4.1 Slider Navigation Buttons
+    4.2 Slider Inner Info
+  4.3 Pagination
+5. Albums
+6. Gallery
+7. Blog
+8. About
+9. Contact
+10. Footer
+11. Responsive Rules
+
+*/
+
+/**
+ * 1. General style
+ */
+
+/*Text font*/
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
+/*Social icons font*/
+@import 'https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?rd5re8';
+
+::selection {
+    background: #555;
+    color: #fff;
+}
+::-moz-selection {
+    background: #555;
+    color: #fff;
+}
+body {
+
+    padding: 0;
+    margin: 0 auto;
+    min-height: 100vh;
+    font-family: 'Italiana', serif;
+    color: #151515;
+    background-color: #00cbff;
+}
+
+article,
+aside,
+details,
+figcaption,
+footer,
+header,
+hgroup,
+nav,
+section {
+    display: block;
+}
+
+a {
+    color: #ffff;
+    text-decoration: none;
+}
+
+blockquote {
+    padding: 10px 20px;
+    color: #151515;
+    font-size: 1.4em;
+    font-style: italic;
+    font-weight: 300;
+    margin: 0 auto 30px;
+}
+
+ul {
+    list-style-type: none;
+    list-style: none;
+    padding-left: 0 !important;
+    -webkit-padding-start: initial !important;
+    -moz-padding-start: initial;
+}
+
+menu,
+ol,
+ul {
+    padding: 0 !important;
+}
+
+button {
+    background: transparent;
+    border: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+
+
+img {
+    width: 100%;
+}
+
+/* 1.1 Typography */
+
+h1,
+h2,
+h4,
+h5,
+h6 {
+    color: #151515;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+h1 {
+    font-size: calc(80px + 1vw);
+}
+h2 {
+    font-size: calc(36px + 16 * (100vw - 992px) / 1508);
+}
+h3 {
+    font-size: calc(28px + 16 * (100vw - 992px) / 1508);
+    margin-bottom: 20px;
+}
+h4 {
+    font-size: calc(24px + 16 * (100vw - 992px) / 1508);
+    font-weight: 300;
+}
+h5 {
+    font-size: 20px;
+    font-weight: 400;
+}
+h6 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: calc(10px + 10 * (100vw - 992px) / 1508);
+}
+p {
+    font-size: calc(18px + 2 * (100vw - 992px) / 1508);
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+/* 1.2 Specials Classes */
+
+.c-white {
+    color: #fff !important;
+}
+.navbar-white {
+    color: #fff;
+    background-color: transparent !important;
+}
+.center-block {
+    display: flex;
+    justify-content: center;
+}
+.align-left {
+    text-align: left;
+}
+.align-right {
+    text-align: right;
+}
+.align-center {
+    text-align: center;
+    display: block;
+}
+
+/* 1.3 Button */
+
+.ms-button {
+  color: #111111;
+  display: inline-block;
+  position: relative;
+  padding: .5em 1em;
+  margin-bottom: 0;
+  font-weight: 400 !important;
+  font-size: 14px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  text-decoration: none;
+  border: solid 1px;
+  transition: color .4s ease;
+}
+.ms-button:after {
+    position: absolute;
+    display: block;
+    content: attr(data-title);
+    padding: 7px 0;
+    font-size: 14px;
+    left: 0;
+    top: 0;
+    width: 0%;
+    background: #11111;
+    color: #fff;
+    text-indent: 1rem;
+    transition: all .3s ease;
+    overflow: hidden;
+    border: none;
+    bottom: 0;
+}
+.ms-button:hover {
+  color: #111111;
+}
+.ms-button:active::after,
+.ms-button:focus::after,
+.ms-button:hover::after {
+    width: 100%;
+    padding-right: 25px;
+}
+
+.ms-btn--slider {
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 11em;
+  font-weight: 600;
+}
+
+.ms-btn--slider::before{
+    content: '';
+    height: .1rem;
+    width: 2rem;
+    margin-right: .7rem;
+    background: #111111;
+    transition: width .3s ease;
+}
+
+.ms-btn--slider:hover::before {
+  width: 3rem;
+}
+
+/**
+ * 2. Header
+ */
+
+.ms-header {
+    position: fixed;
+    width: 100%;
+  background-color: #49fce8;
+    z-index: 3;
+}
+
+/* 2.1 Menu */
+
+.ms-logo {
+    position: relative;
+    z-index: 7;
+    height: 50px;
+}
+.logo-dark,
+.logo-light {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity .3s ease .4s;
+}
+.ms-logo img {
+    width: auto;
+    height: 100%;
+}
+.logo-dark.current,
+.logo-light.current {
+    opacity: 1;
+}
+.logo-dark.active,
+.logo-light.active {
+    opacity: 1;
+    transition: opacity .1s;
+}
+.ms-nav {
+    padding: 2em 3em;
+    color: inherit;
+}
+
+/* 2.2 Burger button */
+
+.hamburger {
+    margin-right: 0;
+    margin-left: auto;
+    overflow: visible;
+    cursor: pointer;
+    z-index: 7;
+    border: 0;
+    transition-timing-function: linear;
+    transition-duration: .3s ease;
+    transition-property: opacity, -webkit-filter;
+    transition-property: opacity, filter;
+    transition-property: opacity, filter, -webkit-filter;
+}
+.navbar-white .hamburger-label {
+    color: #11111;
+}
+.hamburger-label {
+    display: block;
+    font-family: 'Italiana', serif;
+    font-size: 16px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: -4em;
+    padding-right: 4em;
+
+    line-height: 1.5em;
+    transition: color .3s ease .4s;
+    color: #11111;
+}
+.hamburger.is-active .hamburger-label {
+    color: #11111 !important;
+    transition: color .1s ease;
+}
+.hamburger-box {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    vertical-align: middle;
+}
+.hamburger-inner {
+    display: block;
+    top: 0;
+}
+.navbar-white .hamburger-inner,
+.navbar-white .hamburger-inner:after,
+.navbar-white .hamburger-inner:before {
+    background-color: #11111;
+    transition: transform .3s ease .2s, background-color .3s ease .2s, opacity .3s ease .3s;
+}
+.hamburger-inner:after,
+.hamburger-inner:before {
+    display: block;
+    content: '';
+}
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #151515;
+    transition: all .3s ease .5s;
+}
+.hamburger-inner:before {
+    top: 8px;
+    left: -8px;
+}
+.hamburger-inner:after {
+    top: 16px;
+    width: 26px;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner:after {
+    background-color: #fff;
+    transition-delay: .1s;
+}
+.hamburger.is-active .hamburger-inner {
+    -webkit-transform: translate3d(0, 8px, 0) rotate(45deg);
+    transform: translate3d(0, 8px, 0) rotate(45deg);
+}
+.hamburger.is-active .hamburger-inner:before {
+    opacity: 0;
+    transition: opacity .3s ease 0s
+}
+.hamburger.is-active .hamburger-inner:after {
+    width: 30px;
+    -webkit-transform: translate3d(0, -16px, 0) rotate(-90deg);
+    transform: translate3d(0, -16px, 0) rotate(-90deg);
+}
+
+/* 2.3 Collapse navigation */
+
+.ms-nav {
+    display: flex;
+    align-items: center;
+}
+.height-full-viewport {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    background-color: #151515;
+    z-index: 5;
+    overflow: hidden;
+    transition: height .8s cubic-bezier(0.3, 1, 0.3, 1) .1s;
+}
+.ms-navbar {
+    z-index: 6;
+    margin: 0 auto;
+    display: block;
+    width: auto;
+    height: auto;
+    top: 0;
+    left: 0;
+}
+
+.ms-nav.is-visible .height-full-viewport {
+    height: 100vh;
+    transition: height 1s ease;
+}
+
+.nav-item {
+    cursor: pointer;
+    padding: .75em;
+    opacity: 0;
+    width: 240px;
+    margin-left: 3em;
+    transition: opacity .3s ease;
+}
+
+.ms-navbar a {
+    display: block;
+}
+
+.ms-navbar .ms-btn {
+    display: inline-block;
+    text-transform: uppercase;
+    line-height: 1;
+    padding: 0 0.25em;
+    position: relative;
+}
+
+.ms-navbar .ms-btn {
+    font-size: 1.75em;
+    color: #fff;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.ms-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #49fce8;
+    height: .1rem;
+    top: 50%;
+    width: 0;
+    transition: width .3s ease;
+}
+
+.nav-item__label {
+    position: relative;
+    display: block;
+    margin: 0.5em 0 0 0;
+    margin-top: 0.25em;
+    padding: 0.5em;
+    color: #555;
+    transition: color .3s ease;
+    text-decoration: none;
+}
+
+.nav-item:hover .nav-item__label {
+    color: #9a9a9a;
+}
+
+.is-visible .nav-item {
+    opacity: 1;
+    transition: opacity 2s cubic-bezier(0.16, 1.08, 0.38, 0.98) .3s;
+}
+
+.nav-item .ms-btn {
+    transition: all .3s ease;
+}
+
+.nav-item:active .ms-btn,
+.nav-item:focus .ms-btn,
+.nav-item:hover .ms-btn {
+    color: #00cbff;
+    opacity: 1;
+    padding-left: 2.4rem;
+}
+
+.nav-item:active .ms-btn::before,
+.nav-item:focus .ms-btn::before,
+.nav-item:hover .ms-btn::before {
+    width: 2rem;
+}
+
+/**
+ * 3. Pages Style
+ */
+
+.ms-preloader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 8;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+  background-color: #00cbff;
+}
+
+.ms-main-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    opacity: 0;
+    background-color: #00cbff;
+}
+
+.ms-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-top: 12em;
+}
+
+
+
+.ms-page-title span {
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    color: #df1f29;
+}
+
+.page-header {
+    text-transform: uppercase;
+    position: relative;
+    margin: 15px 0;
+}
+
+
+
+/**
+ * 11. Responsive Rules
+ */
+
+@media only screen and (max-width: 805px) {
+    h1 {
+        font-size: calc(48px + 1vw);
+    }
+    h6 {
+        font-size: 16px;
+    }
+    blockquote {
+        margin: 0 auto 15px;
+        font-size: 1em;
+    }
+    .expanded-timeline {
+        width: 50vh;
+    }
+    .ms-nav {
+        padding-top: 1.4em;
+    }
+    .ms-navbar .ms-btn {
+        font-size: 1.4em;
+    }
+    .ms-navbar {
+        position: relative;
+        width: 100%;
+        min-height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: auto;
+    }
+    .nav-item {
+        display: inline-block;
+        width: auto;
+        margin-left: 0;
+    }
+    .nav-item__label {
+        display: none;
+    }
+    .ms-nav {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 1.4em;
+    }
+
+
+
+
+
+.black{
+    color:black;
+}
+
+.black:hover{
+    color:#ffff;
+}
