@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>DEC | 3D Design</title>
+    <meta charset="utf-8">
+    <meta name="description" content="3D Design">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Duculet EMILIA Cristina | DEC" />
+    <link rel="shortcut icon" type="image/png" href="../../img/favicon.png">
+    <link type="text/css" href="styles.css" rel="stylesheet"/>
+    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.typekit.net/ofv7fvi.css">
+
+
+
+
+<link rel="stylesheet" href="../css/plugins.min.css">
+
+<link rel="stylesheet" type="text/css" href="../css/typo.css" />
+
+
+
+
+
+
+    </head>
+
+  <body class="bodyc">
+  <div class="cursor"></div>
+  <div class="cursor-border"></div>
+  <!-- Header -->
+  <header class="ms-header navbar-white">
+  <nav class="ms-nav">
+  <div class="ms-logo">
+  <a href="index.html" data-type="page-transition">
+  <div class="logo-dark"><img src="../img/logo.png" alt="logo image"></div>
+  <div class="logo-light current"><img src="../img/logo.png" alt="logo image"></div>
+  </a>
+  </div>
+
+        <button class="hamburger" type="button" data-toggle="navigation">
+        <span class="hamburger-box">
+        <span class="hamburger-label type--btwo">menu</span>
+        <span class="hamburger-inner"></span>
+        </span>
+        </button>
+
+      <div class="height-full-viewport">
+      <ul class="ms-navbar type--btwo">
+      <!-- Nav Link -->
+      <li class="nav-item">
+      <a href="../index.html" data-type="page-transition">
+      <span class="ms-btn ">home</span>
+      <span class="nav-item__label ">Back to home page</span>
+      </a>
+      </li>
+      <!-- Nav Link -->
+      <li class="nav-item">
+      <a href="../about.html" data-type="page-transition">
+      <span class="ms-btn">about</span>
+      <span class="nav-item__label">Learn more about Me</span>
+      </a>
+      </li>
+      <!-- Nav Link -->
+      <li class="nav-item">
+      <a href="../services.html" data-type="page-transition">
+      <span class="ms-btn">Services</span>
+      <span class="nav-item__label">Let's Create Together</span>
+      </a>
+      </li>
+      <!-- Nav Link -->
+      <li class="nav-item">
+      <a href="../gallery.html" data-type="page-transition">
+      <span class="ms-btn">Gallery</span>
+      <span class="nav-item__label">View all works</span>
+      </a>
+      </li>
+
+      <!-- Nav Link -->
+      <li class="nav-item">
+      <a href="contact/index.html" data-type="page-transition">
+      <span class="ms-btn">contact</span>
+      <span class="nav-item__label">Let's Talk</span>
+      </a>
+      </li>
+      </ul>
+
+      </div>
+      </nav>
+    </header>
+
+
+
+
+  <!-- <model-viewer> HTML element -->
+  <model-viewer class="viewerc" bounds="tight" src="untitledc.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral"  shadow-intensity="1">
+  <div class="progress-bar hide" slot="progress-bar"></div>
+  <div class="arrowRight">  <a  href="indexb.html"> <i class="fa">&#xf104;</i></a></div>
+  <div class="title"><a href="../characters.html"><div class="glitch-wrapper">
+<div class="glitch type--btwoc" data-text="CHARACTERS">CHARACTERS</div>
+</div>  </a> </div>
+  <div class="arrowLeft">  <a  href="indexd.html"> <i class="fa">&#xf105;</i></a></div>
+  </model-viewer>
+
+
+
+
+  <script type="text/javascript" src='https://madsparrow.me/emily/assets/js/jquery-3.2.1.min.js'></script>
+
+
+  <!-- Vendors -->
+  <script type="text/javascript" src='https://madsparrow.me/emily/assets/js/plugins.min.js'></script>
+  <!-- Main js -->
+  <script type="text/javascript" src="https://madsparrow.me/emily/assets/js/main.js"></script>
+
+
+
+
+
+
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    </body>
+</html>
+<!--
+
+/*MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNx,    .l0WMMMMMMM
+lllllllllloodxkOKXWMMMMMMMMMMMWXKKKKKXXXXXXNNNNNNNWMMMMMMMMMMKc.       .oKWMMMMM
+                ..;lONMMMMMMMMNl..............''',dNMMMMMMMWO,           'xNMMMM
+                     'dXMMMMMMMk.                 ,KMMMMMMM0,             .oNMMM
+                       'xNMMMMMX:                 .kMMMMMMNc               .oNMM
+                        .cXMMMMMx.                .dWMMMMMk.                .dWM
+                          ;KMMMMK;                 cNMMMMX:                  'OM
+                           ;KMMMWo                 ;XMMMMO.                   cN
+                            :XMMM0'                ,KMMMWd                    .O
+                             oNMMN:                .OMMMX:                     o
+                             .OMMWd.               .kMMM0'                     :
+              .,,.            cNMMO.               .xMMMx.                     '
+              'OWO;           .OMMK,               .dMMWo                      .
+              .xMM0'           oWMNc                dWMX:        .lx,          .
+               oWMNl           :NMWo                dWMK,        cNWo
+               cNMMx.          ,KMWd.               dWMk.       .xMWd.
+               ;XMMO.          '0MMx.         .'.  .dWMx.       '0MWd
+               ,KMM0'          .OMMx.        .kNX0kxKMWo        ;XMWl
+               '0MMK,          .OMMx.        .OMMMMMMMN:        cNMN:
+               '0MMK,          '0MWd.        '0MMMMMMMK,        oWMK,
+               ,KMM0,          ,KMWl         ,KMMMMMMMO.       .xMMO.
+               ;XMMO.          :NMX:         :NMMMMMMWd        .OMMx.
+               cNMMk.          oWM0'         oWMMMMMMNc        ,KMWo
+               lWMWo          .kMMx.        .kMMMMMMM0,        cNMNc
+              .dMMNc          ,KMNc         ,0MMMMMMMx.        oWMX;
+              .kMMK,          lWM0'         lNMMMMMMNc        .kMM0'
+              '0MMk.         .kMWd.         ,x0NWMMM0'        ,KMMk.           .
+              ;XMWo          :XMX;            ..c0MWd.        cNMWd         .:d0
+              lNMX:         .dWMk.              '0MX:         dWMNc    .':oOXWMM
+             .dMM0'         ,KMNc               oWMk.        .OMMNo,:lx0NWMMMMMM
+             .kMMk.         oWMO.              '0MNc         ,KMMWNNMMMMMMMMMMMM
+             ,0MWo         .OMNc               lNMO.         cNMMMMMMMMMMMMMMMMM
+             :XMX:         cNMO'              .OMWl         .xMMMMMMMMMMMMMMMMMM
+             lWM0'        .kMWo               cNM0,         '0MMMMMMMMMMMMMMMMMM
+            .xMMx.        ;XMK,        ';'.  .kMWd.         ;XMMMMMMMMMMMMMMMMMM
+            .OMWl         dWWx.       ,KWN0xlxNMX;          oWMMMMMMMMMMMMMMMMMM
+            ,KMX:        'OMNc        oWMMMMMMMMk.         .xMMMMMMMMMMMMMWX0koc
+            :XM0'        :XM0'       .kMMMMMMMMWo          '0MMMWNXX0Okdl:,..
+            lWMk.        dWMx.       ;KMMMMMMMMX;          ;XMMWx,...
+           .dWWo        .OMWo        cNMMMMMMMMO.          cNMMN:
+           .kMNc        ,KMN:        dWMMMMMMMMx.          oWMMX;
+           '0MK;        :NMK,       .kMMMMMMMMWo          .dMMMK,
+           ;KMO.        oWM0'       .OMMMMMMMMWo          .xMMMK,
+           :NWd.       .xMMO.       '0MMMMMMMMWl          .xMMMK,
+           lWX:        .kMMk.       '0MMMMMMMMWo          .dWMMX;
+           dWx.        .OMMx.        ,ldxk0XNMMx.          lWMMNc
+          .co.         ,KMMx.             ..:KMO.          cNMMWo              .
+                       ;XMMx.               .kMK;          ,KMMMd.             .
+                       :NMMx.                oWWo          .xMMMx.             '
+                       lWMMk.                cNMO'          :XMMx.             :
+                       oWMMk.                '0MNl           ;xk;              o
+                      .xMMMO'                .xMMK,                           .k
+                      .OMMMK,                 cNMWk.                          :X
+                      ;KMMMX;                 '0MMWd.                        .xW
+                      oWMMMNc                  oWMMNd.                       cNM
+                     '0MMMMWd                  ,KMMMWx.                     ,0MM
+                    .xWMMMMMk.                 .dWMMMWO,                   'OWMM
+                   .xNMMMMMM0,                  ,KMMMMMXo.                'kWMMM
+           .....,:dKWMMMMMMMNd''''...............xWMMMMMW0c.             ,OWMMMM
+loodxxkkOO00KKXNWWMMMMMMMMMMMWNNNNNNXXXXXXKKKKK00XWMMMMMMMW0o'.        .oXMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXx;.    .c0WMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWXOkKNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+
+............................................................................../*
+
+  -->
