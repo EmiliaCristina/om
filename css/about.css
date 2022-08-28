@@ -494,7 +494,7 @@ video { display: block; width: auto; height: cover;}
 
 .glass-panel {
   position: fixed;
- top: 70%;
+ top: 50%;
  left: 50%;
  /* bring your own prefixes */
  transform: translate(-50%, -50%);
