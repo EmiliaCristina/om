@@ -529,7 +529,50 @@ p {
     width: 2rem;
 }
 
+@media only screen and (max-width: 805px) {
+    h1 {
+        font-size: calc(48px + 1vw);
+    }
+    h6 {
+        font-size: 16px;
+    }
+    blockquote {
+        margin: 0 auto 15px;
+        font-size: 1em;
+    }
+    .expanded-timeline {
+        width: 50vh;
+    }
+    .ms-nav {
+        padding-top: 1.4em;
+    }
+    .ms-navbar .ms-btn {
+        font-size: 1.4em;
+    }
+    .ms-navbar {
+        position: relative;
+        width: 100%;
+        min-height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: auto;
+    }
+    .nav-item {
+        display: inline-block;
+        width: auto;
+        margin-left: 0;
+    }
 
+.nav-item__label{
+  display: none;
+}
+    .ms-nav {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 1.4em;
+    }
 
 
 .socialUl li a{
